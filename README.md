@@ -8,8 +8,11 @@
 首先感谢李培英老师，《职业化研讨》这门课非常值得公司内的一线管理人员去学习。在讲到职业化内涵里的“规则意识”一节时，让大家做了一个简单的大塞车游戏，规则如下：
 
 1、邀请16名以上的学员（注意是偶数），列成两队，面对面的坐在椅子上。
+
 2、中间叫做“鸿沟”，是不允许越过的。
+
 3、在“鸿沟”的一端，有一把空椅子，暂且把靠近这一端的队叫做队头。
+
 4、要求两队只能通过空椅子这条路来交换位置，自己只允许两种行动方式，第一往前走一步，第二可以隔着对方跳一步。
 
 例如，分为A，B两队，初始状态如下：
@@ -52,18 +55,23 @@ A8 | A7 | A6 | A5 | A4 | A3 | A2 | A1 |
 按照这种规则，我的算法放到了github上，具体演示见下面的gif图。
 
 每队1人：
+
 ![](http://neoremind.com/wp-content/uploads/elem3.gif)
 
 每队2人：
+
 ![](http://neoremind.com/wp-content/uploads/elem5.gif)
 
 每队3人：
+
 ![](http://neoremind.com/wp-content/uploads/elem7.gif)
 
 每队4人：
+
 ![](http://neoremind.com/wp-content/uploads/elem9.gif)
 
 每队5人：
+
 ![](http://neoremind.com/wp-content/uploads/elem11.gif)
 
 这道题目，重点在于总结这个行动的规则，并且用算法描述实现，大言不惭的说可以post到leetcode上了，看谁能解了，我的解法不一定最好，边界条件的判断非常多，需要小心处理。
