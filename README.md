@@ -76,7 +76,7 @@ A8 | A7 | A6 | A5 | A4 | A3 | A2 | A1 |
 
 这道题目，重点在于总结这个行动的规则，并且用算法描述实现，大言不惭的说可以post到leetcode上了，看谁能解了，我的解法不一定最好，边界条件的判断非常多，需要小心处理。
 
-算法入口如下，`BigTrafficJam`构造函数是两队人数加上空椅子的个数，所以是一个大于等于3的奇数，调用solve方法即可：
+算法入口如下，`BigTrafficJam`构造函数是两队人数加上空椅子的个数，所以是一个大于等于3的奇数，调用`solve`方法即可：
 ```
 new BigTrafficJam(17).solve();
 //new BigTrafficJam(17).setDebug(false).solve(); //用于打印中间状态的debug信息与否
