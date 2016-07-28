@@ -146,50 +146,6 @@ public class BigTrafficJam {
     }
 
     /**
-     * 生成初始列表。<br/>
-     * 例如输入参数为<code>13</code>，
-     * 则生成
-     * <code>[A6, A5, A4, A3, A2, A1,  #, B1, B2, B3, B4, B5, B6]</code>
-     *
-     * @param length 座位数
-     *
-     * @return 初始列表
-     */
-    public static List<Id> generateList(int length) {
-        List<Id> result = new ArrayList<>(length);
-        for (int i = MID_IDX; i > 0; i--) {
-            result.add(A.id(i));
-        }
-        result.add(absent);
-        for (int i = 1; i <= MID_IDX; i++) {
-            result.add(B.id(i));
-        }
-        return result;
-    }
-
-    /**
-     * 生成初始列表。<br/>
-     * 例如输入参数为<code>13</code>，
-     * 则生成
-     * <code>[A6, A5, A4, A3, A2, A1,  #, B1, B2, B3, B4, B5, B6]</code>
-     *
-     * @param length 座位数
-     *
-     * @return 初始列表
-     */
-    public static List<Id> generateAnsweredList(int length) {
-        List<Id> result = new ArrayList<>(length);
-        for (int i = 1; i <= MID_IDX; i++) {
-            result.add(B.id(i));
-        }
-        result.add(absent);
-        for (int i = MID_IDX; i > 0; i--) {
-            result.add(A.id(i));
-        }
-        return result;
-    }
-
-    /**
      * 移动A组
      *
      * @param list 待排列表
@@ -347,6 +303,50 @@ public class BigTrafficJam {
                 e.printStackTrace();
             }
         }
+    }
+
+    /**
+     * 生成初始列表。<br/>
+     * 例如输入参数为<code>13</code>，
+     * 则生成
+     * <code>[A6, A5, A4, A3, A2, A1,  #, B1, B2, B3, B4, B5, B6]</code>
+     *
+     * @param length 座位数
+     *
+     * @return 初始列表
+     */
+    public static List<Id> generateList(int length) {
+        List<Id> result = new ArrayList<>(length);
+        for (int i = MID_IDX; i > 0; i--) {
+            result.add(A.id(i));
+        }
+        result.add(absent);
+        for (int i = 1; i <= MID_IDX; i++) {
+            result.add(B.id(i));
+        }
+        return result;
+    }
+
+    /**
+     * 生成结果列表，用于testcase验证使用。<br/>
+     * 例如输入参数为<code>13</code>，
+     * 则生成
+     * <code>[B1, B2, B3, B4, B5, B6,  #, A6, A5, A4, A3, A2, A1]</code>
+     *
+     * @param length 座位数
+     *
+     * @return 初始列表
+     */
+    public static List<Id> generateAnsweredList(int length) {
+        List<Id> result = new ArrayList<>(length);
+        for (int i = 1; i <= MID_IDX; i++) {
+            result.add(B.id(i));
+        }
+        result.add(absent);
+        for (int i = MID_IDX; i > 0; i--) {
+            result.add(A.id(i));
+        }
+        return result;
     }
 
     public BigTrafficJam setPrintOutIntervalMs(int printOutIntervalMs) {
